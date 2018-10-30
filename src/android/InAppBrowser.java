@@ -18,6 +18,7 @@
 */
 package org.apache.cordova.inappbrowser;
 
+import org.elastos.trinity.dapprt.TrinityPlugin;
 import android.annotation.SuppressLint;
 import android.content.ComponentName;
 import android.content.Context;
@@ -82,7 +83,7 @@ import java.util.HashMap;
 import java.util.StringTokenizer;
 
 @SuppressLint("SetJavaScriptEnabled")
-public class InAppBrowser extends CordovaPlugin {
+public class InAppBrowser extends TrinityPlugin {
 
     private static final String NULL = "null";
     protected static final String LOG_TAG = "InAppBrowser";
