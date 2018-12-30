@@ -22,6 +22,7 @@
 #import <Cordova/CDVScreenOrientationDelegate.h>
 #import "CDVInAppBrowserOptions.h"
 #import "CDVInAppBrowserNavigationController.h"
+#import "TrinityPlugin.h"
 
 #ifdef __CORDOVA_4_0_0
     #import <Cordova/CDVUIWebViewDelegate.h>
@@ -31,7 +32,7 @@
 
 @class CDVUIInAppBrowserViewController;
 
-@interface CDVUIInAppBrowser : CDVPlugin {
+@interface CDVUIInAppBrowser : TrinityPlugin {
   UIWindow * tmpWindow;
 
   @private

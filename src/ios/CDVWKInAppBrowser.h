@@ -23,10 +23,11 @@
 #import "CDVWKInAppBrowserUIDelegate.h"
 #import "CDVInAppBrowserOptions.h"
 #import "CDVInAppBrowserNavigationController.h"
+#import "TrinityPlugin.h"
 
 @class CDVWKInAppBrowserViewController;
 
-@interface CDVWKInAppBrowser : CDVPlugin {
+@interface CDVWKInAppBrowser : TrinityPlugin {
 }
 
 @property (nonatomic, retain) CDVWKInAppBrowser* instance;

@@ -19,8 +19,9 @@
 
 #import <Cordova/CDVPlugin.h>
 #import <Cordova/CDVInvokedUrlCommand.h>
+#import "TrinityPlugin.h"
 
-@interface CDVInAppBrowser : CDVPlugin {}
+@interface CDVInAppBrowser : TrinityPlugin {}
 
 @property (nonatomic, assign) BOOL wkwebviewavailable;
 @property (nonatomic, assign) BOOL usewkwebview;
