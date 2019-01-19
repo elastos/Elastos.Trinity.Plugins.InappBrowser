@@ -23,14 +23,14 @@ description: Open an in-app browser window.
 
 |AppVeyor|Travis CI|
 |:-:|:-:|
-|[![Build status](https://ci.appveyor.com/api/projects/status/github/apache/cordova-plugin-inappbrowser?branch=master)](https://ci.appveyor.com/project/ApacheSoftwareFoundation/cordova-plugin-inappbrowser)|[![Build Status](https://travis-ci.org/apache/cordova-plugin-inappbrowser.svg?branch=master)](https://travis-ci.org/apache/cordova-plugin-inappbrowser)|
+|[![Build status](https://ci.appveyor.com/api/projects/status/github/apache/elastos-trinity-plugins-inappbrowser?branch=master)](https://ci.appveyor.com/project/ApacheSoftwareFoundation/elastos-trinity-plugins-inappbrowser)|[![Build Status](https://travis-ci.org/apache/elastos-trinity-plugins-inappbrowser.svg?branch=master)](https://travis-ci.org/apache/elastos-trinity-plugins-inappbrowser)|
 |npm install|npm install|
 |eslint|eslint|
 ||browser (chrome, firefox, edge)|
 ||iOS (9.3) on Xcode 7.3|
 ||Android (4.4)|
 
-# cordova-plugin-inappbrowser
+# elastos-trinity-plugins-inappbrowser
 
 You can show helpful articles, videos, and web resources inside of your app. Users can view web pages without leaving your app.
 
@@ -73,7 +73,7 @@ Although `window.open` is in the global scope, InAppBrowser is not available unt
 
 ## Installation
 
-    cordova plugin add cordova-plugin-inappbrowser
+    cordova plugin add elastos-trinity-plugins-inappbrowser
 
 If you want all page loads in your app to go through the InAppBrowser, you can
 simply hook `window.open` during initialization.  For example:
@@ -133,7 +133,7 @@ instance, or the system browser.
 
     iOS supports these additional options:
 
-    - __usewkwebview__: set to `yes` to use WKWebView engine for the InappBrowser. Omit or set to `no` (default) to use UIWebView. Note: Using `usewkwebview=yes` requires that a WKWebView engine plugin be installed in the Cordova project (e.g. [cordova-plugin-wkwebview-engine](https://github.com/apache/cordova-plugin-wkwebview-engine) or [cordova-plugin-ionic-webview](https://github.com/ionic-team/cordova-plugin-ionic-webview)).
+    - __usewkwebview__: set to `yes` to use WKWebView engine for the InappBrowser. Omit or set to `no` (default) to use UIWebView. Note: Using `usewkwebview=yes` requires that a WKWebView engine plugin be installed in the Cordova project (e.g. [elastos-trinity-plugins-wkwebview-engine](https://github.com/apache/elastos-trinity-plugins-wkwebview-engine) or [elastos-trinity-plugins-ionic-webview](https://github.com/ionic-team/elastos-trinity-plugins-ionic-webview)).
     - __hidden__: set to `yes` to create the browser and load the page, but not show it. The loadstop event fires when loading is complete. Omit or set to `no` (default) to have the browser open and load normally.
     - __beforeload__: set to `yes` to enable the `beforeload` event to modify which pages are actually loaded in the browser.
     - __clearcache__: set to `yes` to have the browser's cookie cache cleared before the new window is opened
@@ -536,7 +536,7 @@ $('#help-select').on('change', function (e) {
 
         case "article":
             url = "https://cordova.apache.org/docs/en/latest/"
-                        + "reference/cordova-plugin-inappbrowser/index.html";
+                        + "reference/elastos-trinity-plugins-inappbrowser/index.html";
             break;
 
         case "video":
