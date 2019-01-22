@@ -73,7 +73,9 @@ Although `window.open` is in the global scope, InAppBrowser is not available unt
 
 ## Installation
 
-    cordova plugin add elastos-trinity-plugins-inappbrowser
+    cordova plugin add https://github.com/elastos/Elastos.Trinity.Plugins.InappBrowser
+
+    The plugins field of dapp manifest.json adds InappBrowser values, such as "plugins": ["XXXX", "InappBrowser", "XXXX"]
 
 If you want all page loads in your app to go through the InAppBrowser, you can
 simply hook `window.open` during initialization.  For example:
