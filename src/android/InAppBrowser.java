@@ -18,7 +18,7 @@
 */
 package org.apache.cordova.inappbrowser;
 
-import org.elastos.trinity.dapprt.TrinityPlugin;
+import org.elastos.trinity.runtime.TrinityPlugin;
 import android.annotation.SuppressLint;
 import android.content.ComponentName;
 import android.content.Context;
