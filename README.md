@@ -21,15 +21,6 @@ description: Open an in-app browser window.
 #         under the License.
 -->
 
-|AppVeyor|Travis CI|
-|:-:|:-:|
-|[![Build status](https://ci.appveyor.com/api/projects/status/github/apache/elastos-trinity-plugins-inappbrowser?branch=master)](https://ci.appveyor.com/project/ApacheSoftwareFoundation/elastos-trinity-plugins-inappbrowser)|[![Build Status](https://travis-ci.org/apache/elastos-trinity-plugins-inappbrowser.svg?branch=master)](https://travis-ci.org/apache/elastos-trinity-plugins-inappbrowser)|
-|npm install|npm install|
-|eslint|eslint|
-||browser (chrome, firefox, edge)|
-||iOS (9.3) on Xcode 7.3|
-||Android (4.4)|
-
 # elastos-trinity-plugins-inappbrowser
 
 You can show helpful articles, videos, and web resources inside of your app. Users can view web pages without leaving your app.
@@ -72,8 +63,6 @@ Although `window.open` is in the global scope, InAppBrowser is not available unt
     }
 
 ## Installation
-
-    cordova plugin add https://github.com/elastos/Elastos.Trinity.Plugins.InappBrowser
 
     The plugins field of dapp manifest.json adds InappBrowser values, such as "plugins": ["XXXX", "InappBrowser", "XXXX"]
 
@@ -119,7 +108,7 @@ instance, or the system browser.
     - __closebuttoncaption__: set to a string to use as the close button's caption instead of a X. Note that you need to localize this value yourself.
     - __closebuttoncolor__: set to a valid hex color string, for example: `#00ff00`, and it will change the
     close button color from default, regardless of being a text or default X. Only has effect if user has location set to `yes`.
-    - __footer__: set to `yes` to show a close button in the footer similar to the iOS __Done__ button. 
+    - __footer__: set to `yes` to show a close button in the footer similar to the iOS __Done__ button.
     The close button will appear the same as for the header hence use __closebuttoncaption__ and __closebuttoncolor__ to set its properties.
     - __footercolor__: set to a valid hex color string, for example `#00ff00` or `#CC00ff00` (`#aarrggbb`) , and it will change the footer color from default.
     Only has effect if user has __footer__ set to `yes`.
@@ -135,7 +124,7 @@ instance, or the system browser.
 
     iOS supports these additional options:
 
-    - __usewkwebview__: set to `yes` to use WKWebView engine for the InappBrowser. Omit or set to `no` (default) to use UIWebView. Note: Using `usewkwebview=yes` requires that a WKWebView engine plugin be installed in the Cordova project (e.g. [elastos-trinity-plugins-wkwebview-engine](https://github.com/apache/elastos-trinity-plugins-wkwebview-engine) or [elastos-trinity-plugins-ionic-webview](https://github.com/ionic-team/elastos-trinity-plugins-ionic-webview)).
+    - __usewkwebview__: set to `yes` to use WKWebView engine for the InappBrowser. Omit or set to `no` (default) to use UIWebView. Note: Using `usewkwebview=yes` requires that a WKWebView engine plugin be installed in the Cordova project (e.g. [cordova-plugin-wkwebview-engine](https://github.com/apache/cordova-plugin-wkwebview-engine) or [cordova-plugin-ionic-webview](https://github.com/ionic-team/cordova-plugin-ionic-webview)).
     - __hidden__: set to `yes` to create the browser and load the page, but not show it. The loadstop event fires when loading is complete. Omit or set to `no` (default) to have the browser open and load normally.
     - __beforeload__: set to `yes` to enable the `beforeload` event to modify which pages are actually loaded in the browser.
     - __clearcache__: set to `yes` to have the browser's cookie cache cleared before the new window is opened
@@ -169,27 +158,12 @@ instance, or the system browser.
 ### Supported Platforms
 
 - Android
-- Browser
 - iOS
-- OSX
-- Windows
 
 ### Example
 
     var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
     var ref2 = cordova.InAppBrowser.open(encodeURI('http://ja.m.wikipedia.org/wiki/ハングル'), '_blank', 'location=yes');
-
-### OSX Quirks
-
-At the moment the only supported target in OSX is `_system`.
-
-`_blank` and `_self` targets are not yet implemented and are ignored silently. Pull requests and patches to get these to work are greatly appreciated.
-
-### Browser Quirks
-
-- Plugin is implemented via iframe,
-
-- Navigation history (`back` and `forward` buttons in LocationBar) is not implemented.
 
 ## InAppBrowser
 
@@ -323,14 +297,7 @@ function beforeloadCallback(params, callback) {
 ### Supported Platforms
 
 - Android
-- Browser
 - iOS
-- Windows
-- OSX
-
-### Browser Quirks
-
-`loadstart` and `loaderror` events are not being fired.
 
 ### Quick Example
 
@@ -358,9 +325,7 @@ The function is passed an `InAppBrowserEvent` object.
 ### Supported Platforms
 
 - Android
-- Browser
 - iOS
-- Windows
 
 ### Quick Example
 
@@ -380,9 +345,7 @@ The function is passed an `InAppBrowserEvent` object.
 ### Supported Platforms
 
 - Android
-- Browser
 - iOS
-- Windows
 
 ### Quick Example
 
@@ -400,9 +363,7 @@ The function is passed an `InAppBrowserEvent` object.
 ### Supported Platforms
 
 - Android
-- Browser
 - iOS
-- Windows
 
 ### Quick Example
 
@@ -422,7 +383,6 @@ The function is passed an `InAppBrowserEvent` object.
 
 - Android
 - iOS
-- Windows
 
 ### Quick Example
 
@@ -452,9 +412,7 @@ The function is passed an `InAppBrowserEvent` object.
 ### Supported Platforms
 
 - Android
-- Browser
 - iOS
-- Windows
 
 ### Quick Example
 
@@ -462,14 +420,6 @@ The function is passed an `InAppBrowserEvent` object.
     ref.addEventListener('loadstop', function() {
         ref.executeScript({file: "myscript.js"});
     });
-
-### Browser Quirks
-
-- only __code__ key is supported.
-
-### Windows Quirks
-
-Due to [MSDN docs](https://msdn.microsoft.com/en-us/library/windows.ui.xaml.controls.webview.invokescriptasync.aspx) the invoked script can return only string values, otherwise the parameter, passed to __callback__ will be `[null]`.
 
 ## InAppBrowser.insertCSS
 
@@ -489,7 +439,6 @@ Due to [MSDN docs](https://msdn.microsoft.com/en-us/library/windows.ui.xaml.cont
 
 - Android
 - iOS
-- Windows
 
 ### Quick Example
 
